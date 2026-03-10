@@ -1,8 +1,8 @@
 import React from "react";
 import {
   Truck, BarChart3, Box, ShoppingCart, ScanLine, FlaskConical, FileSearch,
-  Link2, ChevronLeft, ChevronRight, Hexagon, Shield, Users, LogOut,
-} from "lucide-react";
+  Link2, ChevronLeft, ChevronRight, Shield, Users, LogOut,
+} from "lucide-react"; // Ícone Hexagon removido
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -38,15 +38,18 @@ export function AppSidebar({ collapsed, onToggle }: AppSidebarProps) {
 
   return (
     <aside className={cn("glass-sidebar fixed left-0 top-0 z-40 flex h-full flex-col transition-all duration-300", collapsed ? "w-[68px]" : "w-[260px]")}>
+      
       {/* Logo */}
-      <div className="flex h-16 items-center gap-3 px-4 border-b border-border/40">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 glow-primary-subtle">
-          <Hexagon className="h-5 w-5 text-primary" />
-        </div>
+      <div className={cn("flex h-16 items-center border-b border-border/40", collapsed ? "justify-center px-2" : "gap-3 px-4")}>
+        <img 
+          src="/SyntexOSL.png" 
+          alt="Logo Syntex OS" 
+          className={cn("shrink-0 object-contain transition-all duration-300", collapsed ? "w-8 h-8" : "w-9 h-9")} 
+        />
         {!collapsed && (
-          <div className="animate-fade-in">
-            <h1 className="text-sm font-bold tracking-wide text-foreground">SYNTEX OS</h1>
-            <p className="text-[10px] font-medium text-muted-foreground tracking-widest">INDÚSTRIA 4.0</p>
+          <div className="animate-fade-in overflow-hidden">
+            <h1 className="text-sm font-bold tracking-wide text-foreground truncate">SYNTEX OS</h1>
+            <p className="text-[10px] font-medium text-muted-foreground tracking-widest truncate">INDÚSTRIA 4.0</p>
           </div>
         )}
       </div>

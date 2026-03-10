@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { Hexagon, LogIn, AlertCircle } from "lucide-react";
+import { LogIn, AlertCircle } from "lucide-react"; // Hexagon removido
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,10 +34,15 @@ const Login = () => {
 
       <div className="w-full max-w-sm relative z-10">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 glow-primary mb-4">
-            <Hexagon className="h-7 w-7 text-primary" />
-          </div>
+        <div className="text-center mb-8 flex flex-col items-center">
+          {/* Imagem da logo substituindo o ícone Hexagon */}
+          <img 
+            src="/SyntexOSL.png" 
+            alt="Logo Syntex OS" 
+            className="w-32 h-auto mb-4 object-contain" 
+          />
+          
+          {/* Se a sua logo já possuir o texto, você pode remover ou ocultar as duas linhas abaixo */}
           <h1 className="text-xl font-bold tracking-wide text-foreground">SYNTEX OS</h1>
           <p className="text-xs text-muted-foreground tracking-widest mt-1">HUB DE AUTOMAÇÃO INDUSTRIAL</p>
         </div>

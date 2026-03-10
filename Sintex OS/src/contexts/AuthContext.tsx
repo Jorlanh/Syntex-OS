@@ -23,7 +23,7 @@ const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 // Mock users for demo
 const MOCK_USERS: Record<string, User & { password: string }> = {
   "super@syntex.io": { id: "sa-1", name: "Super Admin", email: "super@syntex.io", password: "admin123", role: "super_admin", tenantId: "syntex", tenantName: "Syntex OS" },
-  "admin@quimicabr.com": { id: "a-1", name: "Carlos Silva", email: "admin@quimicabr.com", password: "admin123", role: "admin", tenantId: "tenant-1", tenantName: "Química BR Ltda" },
+  "admin@quimicabr.com": { id: "a-1", name: "Jorlan Heider", email: "admin@quimicabr.com", password: "admin123", role: "admin", tenantId: "tenant-1", tenantName: "Química BR Ltda" },
   "user@quimicabr.com": { id: "u-1", name: "Ana Souza", email: "user@quimicabr.com", password: "user123", role: "user", tenantId: "tenant-1", tenantName: "Química BR Ltda" },
 };
 
