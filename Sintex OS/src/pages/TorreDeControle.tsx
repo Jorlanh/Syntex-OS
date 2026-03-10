@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { GlassCard } from "@/components/GlassCard";
 import { KpiCard } from "@/components/KpiCard";
-import { Clock, Truck, Package, TrendingDown, TrendingUp, AlertTriangle, CheckCircle2, Filter } from "lucide-react";
+import { 
+  Clock, Truck, Package, TrendingDown, TrendingUp, 
+  AlertTriangle, CheckCircle2, Filter, Search, Calendar
+} from "lucide-react";
 import {
-  AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell,
+  AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
+  Tooltip, ResponsiveContainer, PieChart, Pie, Cell,
 } from "recharts";
+import { cn } from "@/lib/utils";
 
 const volumeData = [
   { hour: "06h", entrada: 12, saida: 8 },
